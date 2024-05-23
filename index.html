@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta author="Mr.Nobody">
+    <title>Calculator</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+    <div class="container">
+        <div class="calculator">
+
+            <form>
+                <div class="display">
+                    <input type="text" name="display" disabled>
+                </div>
+                <div>
+                    <input type="button" value="AC" onclick="display.value= ''" onmouseover="playSound()">
+                    <input type="button" value="DEL" onclick="display.value = display.value.toString().slice(0,-1)" onmouseover="playSound()">
+                    <input type="button" value="%" onclick="display.value+='%'" onmouseover="playSound()">
+                    <input type="button" value="+" onclick="display.value+='+'" onmouseover="playSound()">
+                </div>
+                <div>
+                    <input type="button" value="9" onclick="display.value+='9'" onmouseover="playSound()">
+                    <input type="button" value="8" onclick="display.value+='8'" onmouseover="playSound()">
+                    <input type="button" value="7" onclick="display.value+='7'" onmouseover="playSound()">
+                    <input type="button" value="-" onclick="display.value+='-'" onmouseover="playSound()">
+                </div>
+                <div>
+                    <input type="button" value="6" onclick="display.value+='6'" onmouseover="playSound()">
+                    <input type="button" value="5" onclick="display.value+='5'" onmouseover="playSound()">
+                    <input type="button" value="4" onclick="display.value+='4'" onmouseover="playSound()">
+                    <input type="button" value="*" onclick="display.value+='*'" onmouseover="playSound()">
+                </div>
+                <div>
+                    <input type="button" value="3" onclick="display.value+='3'" onmouseover="playSound()">
+                    <input type="button" value="2" onclick="display.value+='2'" onmouseover="playSound()">
+                    <input type="button" value="1" onclick="display.value+='1'" onmouseover="playSound()">
+                    <input type="button" value="/" onclick="display.value+='/'" onmouseover="playSound()">
+                </div>
+                <div>
+                    <input type="button" value="0" onclick="display.value+='0'" onmouseover="playSound()">
+                    <input type="button" value="00" onclick="display.value+='00'" onmouseover="playSound()">
+                    <input type="button" value="." onclick="display.value+='.'" onmouseover="playSound()">
+                    <input type="button" value="=" class="equal" onclick="display.value=eval(display.value)" onmouseover="playSound()">
+                </div>
+            </form>
+
+
+        </div>
+    </div>
+    <script src="scripts.js"></script>
+</body>
+
+</html>
